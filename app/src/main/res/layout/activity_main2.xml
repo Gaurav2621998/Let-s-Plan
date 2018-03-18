@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jaya.itday.Main2Activity">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ag"
+    android:id="@+id/img"
+    />
+    <Spinner
+        android:layout_below="@+id/img"
+        android:id="@+id/spin"
+        android:paddingTop="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="244dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="78dp"/>
+
+    <Spinner
+        android:id="@+id/days"
+        android:layout_centerInParent="true"
+        android:layout_width="244dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/spin"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="132dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@+id/days"
+        android:layout_width="181dp"
+        android:layout_height="48dp"
+        android:text="Confirm"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+
+</RelativeLayout>

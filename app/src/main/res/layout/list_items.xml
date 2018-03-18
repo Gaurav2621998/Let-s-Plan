@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="15dp"
+            android:background="#23d4"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewhead"
+                android:text="Package 1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textviewhead"></LinearLayout>
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewele1"
+                android:text="Fateh Sagar"
+                android:layout_below="@id/textviewhead"/>
+                <ImageView
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="310dp"
+                    android:layout_width="20dp"
+                    android:layout_below="@id/textviewhead"
+                    android:src="@drawable/ab"/>
+                />
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/textviewele1"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewele2"
+                android:text="Rani Road"
+                android:layout_marginLeft="8dp"
+                />
+            <ImageView
+                android:layout_height="15dp"
+                android:layout_marginLeft="310dp"
+                android:layout_width="20dp"
+                android:layout_below="@+id/textviewele1"
+                android:src="@drawable/ab"/>
+            />
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewele3"
+                android:layout_below="@+id/textviewele2"
+                android:text="Dudh talai"
+                android:layout_marginLeft="8dp"
+                />
+            <ImageView
+                android:layout_height="15dp"
+                android:layout_marginLeft="310dp"
+                android:layout_width="20dp"
+                android:layout_below="@+id/textviewele2"
+                android:src="@drawable/ab"/>
+            />
+
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewele4"
+                android:layout_below="@+id/textviewele3"
+                android:text="Pichola Lake"
+                android:layout_marginLeft="8dp"
+                />
+            <ImageView
+                android:layout_height="15dp"
+                android:layout_marginLeft="310dp"
+                android:layout_width="20dp"
+                android:layout_below="@+id/textviewele3"
+                android:src="@drawable/ab"/>
+            />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
