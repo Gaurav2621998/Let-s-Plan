@@ -36,7 +36,7 @@
         android:layout_below="@+id/days"
         android:layout_width="181dp"
         android:layout_height="48dp"
-        android:text="Confirm"
+        android:text="Confirm copy"
         android:layout_centerInParent="true"
         tools:layout_editor_absoluteX="118dp"
         tools:layout_editor_absoluteY="241dp" />
