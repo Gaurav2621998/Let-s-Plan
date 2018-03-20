@@ -35,15 +35,15 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
     Context context;
     List <Place> Places = new ArrayList<>();
     DatabaseReference nref= FirebaseDatabase.getInstance().getReference();
-    public List<String> Gen;
+    public List<String> tour;
     String b;
-    public RecyclerViewAdapter(Context context , List<Place> Places) {
+    public RecyclerViewAdapter(Context context , List<Place> Places,List<String> tour) {
 
         this.context = context;
         this.Places=Places;
+        this.tour=tour;
 
     }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -58,19 +58,24 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
+        //BuyerDetail buyer=bdetail.get(position);
+        Place Location = Places.get(position);
 
-        Place p = Places.get(position);
-        String  a= p.getimg();
-
-
-        //Toast.makeText(context,b,Toast.LENGTH_SHORT).show();
-        //Toast.makeText(context, a, Toast.LENGTH_SHORT).show();
-        Glide.with(context.getApplicationContext()).load(a).into(holder.imagedisplay);
-
+        String a=Location.getimg();
         //holder.productcode.setText(productDetail.getProductcode());
-        holder.name.setText(p.getName());
+        holder.name.setText(Location.getName());
+        Glide.with(context.getApplicationContext()).load(a).into(holder.imagedisplay);
+        holder.linear1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent i=new Intent(context,Main5Activity.class);
+                b=tour.get(position).toString();
+                i.putExtra("key",b);
+                context.startActivity(i);
 
+            }
+        });
 
 
     }
@@ -88,22 +93,39 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewH
     class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView imagedisplay;
         public TextView name;
-        public RelativeLayout R;
+        public TextView price;
+
+        public RelativeLayout linear1,linear2;
+
 
         public ViewHolder(View itemView) {
 
-          super(itemView);
+            super(itemView);
 
+            linear1 = (RelativeLayout) itemView.findViewById( R.id.l1);
+            name = (TextView)itemView.findViewById(R.id.name);
+            imagedisplay = (ImageView)itemView.findViewById(R.id.image);
+
+
+//
 
         }
     }
-
 
     public int getSize(){
         return Places.size();
     }
 
-
+    public void clear()
+    {
+        int size = this.Places.size();
+        if (size > 0)
+        {
+            for (int i = 0;i<size;i++)
+                delete(i);
+            this.notifyItemRangeRemoved(0,size);
+        }
+    }
 
     private void delete(int i) {
         Places.remove(i);
