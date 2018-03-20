@@ -1,5 +1,6 @@
 package com.example.jaya.itday;
 
+<<<<<<< dcf945a3b24d9da001d3f41696d842bd59c8f6a4
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,5 +45,16 @@ public class Main6Activity extends AppCompatActivity {
 
 
 
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class Main6Activity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main6);
+>>>>>>> new n
     }
 }
