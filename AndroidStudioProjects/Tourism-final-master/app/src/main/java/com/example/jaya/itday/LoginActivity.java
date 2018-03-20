@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,14 +34,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main11 );
+        setContentView( R.layout.activity_main3 );
 
 
         // GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
         //.requestIdToken(getString(R.string.default_web_client_id))
         //.requestEmail()
         //.build();
-        final ProgressBar p=(ProgressBar)findViewById(R.id.progressBar2);
+
         googleButton = (Button)findViewById(R.id.google);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -56,8 +55,6 @@ public class LoginActivity extends AppCompatActivity {
         googleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                p.setVisibility(View.VISIBLE);
-                googleButton.setVisibility(View.GONE);
                 signIn();
             }
         });
