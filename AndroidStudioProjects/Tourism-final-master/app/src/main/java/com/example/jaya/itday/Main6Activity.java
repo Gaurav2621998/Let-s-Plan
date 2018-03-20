@@ -27,15 +27,18 @@ public class Main6Activity extends AppCompatActivity {
 
         c=(CardView)findViewById(R.id.c1);
         //d=(CardView)findViewById(R.id.c2);
-        s.add("City Palcae");
+        s.add("City Palace");
         s.add("Dudh Talai");
         s.add("Jag Mandir");
         s.add("FatahSagar");
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(Main6Activity.this,Main4Activity.class);
+                Intent i=new Intent(Main6Activity.this,Main3Activity.class);
                 i.putExtra("list",s);
+                startActivity(i);
+
+
             }
         });
 
