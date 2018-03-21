@@ -101,27 +101,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 });
         // Add a marker in Sydney and move the camera
-        final Handler handler=new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
-                mMap.addMarker(new MarkerOptions()
-                        .position(sydney)
-                        .title("This is my title")
-                        .snippet("and snippet")
-                        .icon(BitmapDescriptorFactory.fromResource(R.id.mr_art)));
-                points.add(sydney);
-
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
-                lineOptions.addAll(points);
-                lineOptions.width(20);
-                lineOptions.color(Color.RED);
-
-
-            }
-        },5000);
+//        final Handler handler=new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
+//                mMap.addMarker(new MarkerOptions()
+//                        .position(sydney)
+//                        .title("This is my title")
+//                        .snippet("and snippet")
+//                        .icon(BitmapDescriptorFactory.fromResource(R.id.mr_art)));
+//                points.add(sydney);
+//AIzaSyD6Py6HfTu6Xk5a4S_IWDiCQuZLdPuWPJo
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+//
+//                lineOptions.addAll(points);
+//                lineOptions.width(20);
+//                lineOptions.color(Color.RED);
+//
+//
+//            }
+//        },5000);
 
 
     }
