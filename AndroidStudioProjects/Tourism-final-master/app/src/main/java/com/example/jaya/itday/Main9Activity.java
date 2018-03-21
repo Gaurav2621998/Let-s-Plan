@@ -21,7 +21,7 @@ public class Main9Activity extends AppCompatActivity {
 
         c=(CardView)findViewById(R.id.c1);
         //d=(CardView)findViewById(R.id.c2);
-        s.add("City Palace");
+        s.add("");
         s.add("Dudh Talai");
         s.add("Jag Mandir");
         s.add("FatahSagar");
