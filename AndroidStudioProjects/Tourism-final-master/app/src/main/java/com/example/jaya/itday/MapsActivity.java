@@ -115,7 +115,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 lineOptions.addAll(points);
                 lineOptions.width(20);
                 lineOptions.color(Color.RED);
-        mMap.addPolyline(lineOptions);
+                 mMap.addPolyline(lineOptions);
 
 
 
