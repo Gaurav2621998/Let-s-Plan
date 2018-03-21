@@ -3,6 +3,7 @@ package com.example.jaya.itday;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -100,20 +101,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 });
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
-        mMap.addMarker(new MarkerOptions()
-                .position(sydney)
-                .title("This is my title")
-                .snippet("and snippet")
-                .icon(BitmapDescriptorFactory.fromResource(R.id.mr_art)));
-        points.add(sydney);
+        final Handler handler=new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
+                mMap.addMarker(new MarkerOptions()
+                        .position(sydney)
+                        .title("This is my title")
+                        .snippet("and snippet")
+                        .icon(BitmapDescriptorFactory.fromResource(R.id.mr_art)));
+                points.add(sydney);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        lineOptions.addAll(points);
-                        lineOptions.width(20);
-                       lineOptions.color(Color.RED);
+                lineOptions.addAll(points);
+                lineOptions.width(20);
+                lineOptions.color(Color.RED);
 
+
+            }
+        },5000);
 
 
     }
