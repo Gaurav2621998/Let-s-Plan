@@ -102,12 +102,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         e.printStackTrace();
                     }
                 });
-        // Add a marker in Sydney and move the camera
-        final Handler handler=new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
+               LatLng sydney = new LatLng(Double.parseDouble(Lat), Double.parseDouble(Long));
                 mMap.addMarker(new MarkerOptions()
                         .position(sydney)
                         .title("This is my title")
@@ -120,10 +115,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 lineOptions.addAll(points);
                 lineOptions.width(20);
                 lineOptions.color(Color.RED);
+        mMap.addPolyline(lineOptions);
 
 
-            }
-        },5000);
 
 
     }
